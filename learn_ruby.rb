@@ -73,7 +73,7 @@ class Sample
     puts "Hello again Mark"
   end
 end
-object = Sample. new
+object = Sample.new
 object.hello
 
 
@@ -160,6 +160,8 @@ elsif x==2 || x < 2
 else
   puts "Do you know what you are really doing?"
 end
+
+
 # while loop
 $i = 1
 $num = 6
@@ -183,6 +185,138 @@ def cube(num)
 end
 puts cube(5)
 
+# while loop
+secret_word = "mark"
+guess = ""
+guess_count = 0
+guess_limit = 4
+out_of_guesses = false
+while guess != secret_word and !out_of_guesses
+  if guess_count < guess_limit
+  puts "Enter the guess: "
+  puts "HINT the owner of this file m..."
+  guess = gets.chomp().downcase
+  guess_count +=1
+  else
+    out_of_guesses = true
+  end
+end
+if out_of_guesses
+  puts"You lose"
+else
+  puts "You got it fella! Smile"
+end
 
+# for loop
+cars = ["Lamborghini", "Toyota", "Subaru", "Audi", "Ferrari", "Porsche", "Chevrolet", "Acura"]
+cars.each do |car|
+  puts car
+end
+
+for car_type in cars
+  puts car_type
+end
+
+#Exponent method
+def pow(base_num, pow_num)
+  result = 1
+  pow_num.times do
+    result = result * base_num
+  end
+  return result
+end
+puts pow(5, 5)
+
+#open a file
+File.open("random_numbers.rb", "r+") do |file|
+  file.readline()
+  file.write( "These are random numbers from 100 to 1")
+end
+
+#Handle Errors
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+begin
+  puts numbers["me"]
+rescue
+  puts "Not in the array"
+end
+
+# Question with multiple choices
+class Question
+  attr_accessor :prompt, :answer
+
+  def initialize(prompt, answer)
+    @prompt = prompt
+    @answer = answer
+  end
+end
+
+p1 = "What color are oranges?\n(a)red\n(b)orange\n(c)yellow"
+p2 = "What color is watermelon?\n(a)green\n(b)pink\n(c)red"
+p3 = "What color are apples?\n(a)blue\n(b)yellow\n(c)red"
+
+questions = [
+  Question.new(p1, "b"),
+  Question.new(p2, "a"),
+  Question.new(p3, "c")
+]
+def run_test(questions)
+  answer = ""
+  score = 0
+  for question in questions
+    puts question.prompt
+    answer = gets.chomp
+    if answer == question.answer
+      score +=1
+    end
+  end
+  puts "You got #{score}/#{questions.length}"
+end
+run_test(questions)
+
+
+#Inheritance
+class Chef
+  def make_chicken
+    puts "The chef makes chicken"
+  end
+  def make_salad
+    puts "The chef makes salad"
+  end
+  def make_special_dish
+    puts "The Chef makes barbeque ribs"
+  end
+end
+class ItalianChef < Chef
+  def make_snails
+    puts "The chef can make delicious snails. Yummy!"
+  end
+end
+chef =Chef.new()
+chef.make_chicken
+
+italian_chef = ItalianChef.new()
+italian_chef.make_special_dish
+
+
+#module
+module Tools
+  def sayhello(name)
+    puts "Hello #{name}"
+  end
+  def saybye(user)
+    puts "Bye #{user}"
+  end
+end
+include Tools
+Tools.saybye("mark")
+Tools.sayhello("mark")
+
+
+#Use information of a file
+require_relative 'random_numbers'
+
+
+#Interactive Ruby irb
 
 
