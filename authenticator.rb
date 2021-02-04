@@ -1,3 +1,4 @@
+# database
 users=[
   {username: "test", password: "pass"},
   {username: "mark", password: "pass1"},
