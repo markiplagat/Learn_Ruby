@@ -53,12 +53,12 @@ class Customer
     @customer_addr = addr
   end
   def display_details()
-    puts "Customer id #@customer_id"
-    puts "Customer name #@customer_name"
-    puts "Customer address #@customer_addr"
+    puts "Customer id #{@customer_id}"
+    puts "Customer name #{@customer_name}"
+    puts "Customer address #{@customer_addr}"
   end
   def total_number_of_customers()
-    puts "Total number of customers: #@@no_of_customers"
+    puts "Total number of customers: #{@@no_of_customers}"
   end
 end
 #Create Objects
@@ -66,9 +66,9 @@ customer1 = Customer.new("1", "Mark", "Nairobi")
 customer2 = Customer.new("2", "Rutto", "Eldoret")
 
 #Display Methods
-customer1.display_details()
-customer1.total_number_of_customers()
-customer2.display_details()
+customer1.display_details
+customer1.total_number_of_customers
+customer2.display_details
 
 # Ruby method in a class
 class Sample
@@ -85,12 +85,12 @@ object.hello
 $global_variable = 10
 class Class1
   def print_global
-    puts "Global variable  in Class1 is #$global_variable"
+    puts "Global variable  in Class1 is #{$global_variable}"
   end
 end
 class Class2
   def print_global
-    puts "Global variable in Class2 is #$global_variable"
+    puts "Global variable in Class2 is #{$global_variable}"
   end
 end
 class1obj = Class1.new
@@ -108,9 +108,9 @@ class Customer
     @customer_addr = addr
   end
   def display_details()
-    puts "Customer id #@customer_id"
-    puts "Customer name #@customer_name"
-    puts "Customer address #@customer_addr"
+    puts "Customer id #{@customer_id}"
+    puts "Customer name #{@customer_name}"
+    puts "Customer address #{@customer_addr}"
   end
 end
 #Create Objects
@@ -118,8 +118,8 @@ customer1 = Customer.new("1", "Mark", "Nairobi")
 customer2 = Customer.new("2", "Rutto", "Eldoret")
 
 #Display Methods
-customer1.display_details()
-customer2.display_details()
+customer1.display_details
+customer2.display_details
 
 
 #Ruby constants
@@ -132,7 +132,7 @@ class Example
   end
 end
 #Create Objects
-object = Example.new()
+object = Example.new
 object.show
 
 #Ruby Hashes
@@ -145,8 +145,7 @@ end
 (30..40).each do |n|
   print n, ' '
 end
-binding.pry
-#
+
 puts "Enter num1: "
 num1 = gets.chomp
 puts "Enter num2: "
@@ -184,7 +183,7 @@ sayhi("mark", 35) #call the method
 
 #return statement --making a method give us a feedback
 def cube(num)
-  return num*num*num, 50 #Nothing after the return value will be executed
+  [num * num * num, 50] #Nothing after the return value will be executed
 end
 puts cube(5)
 
@@ -198,7 +197,7 @@ while guess != secret_word and !out_of_guesses
   if guess_count < guess_limit
   puts "Enter the guess: "
   puts "HINT the owner of this file m..."
-  guess = gets.chomp().downcase
+  guess = gets.chomp.downcase
   guess_count +=1
   else
     out_of_guesses = true
@@ -226,13 +225,13 @@ def pow(base_num, pow_num)
   pow_num.times do
     result = result * base_num
   end
-  return result
+  result
 end
 puts pow(5, 5)
 
 #open a file
 File.open("random_numbers.rb", "r+") do |file|
-  file.readline()
+  file.readline
   file.write( "These are random numbers from 100 to 1")
 end
 
@@ -295,10 +294,10 @@ class ItalianChef < Chef
     puts "The chef can make delicious snails. Yummy!"
   end
 end
-chef =Chef.new()
+chef = Chef.new
 chef.make_chicken
 
-italian_chef = ItalianChef.new()
+italian_chef = ItalianChef.new
 italian_chef.make_special_dish
 
 
