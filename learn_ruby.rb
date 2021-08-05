@@ -1,3 +1,6 @@
+# require "Gemfile"
+# require "pry"
+
 #print hello text in ruby
 puts "Hello Mark"
 
@@ -142,7 +145,7 @@ end
 (30..40).each do |n|
   print n, ' '
 end
-
+binding.pry
 #
 puts "Enter num1: "
 num1 = gets.chomp

@@ -29,3 +29,11 @@ p1 = Person.new(2,"kip", 34)
 p.intro
 puts Person.count_all_people
 
+
+class Person
+  def initialize(id,name, age)
+    @id = id
+    @age = age
+    @name = name
+  end
+end
