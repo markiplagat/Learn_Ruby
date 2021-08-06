@@ -50,3 +50,37 @@ puts "In 10 years you will be #{age + 10} years old"
   puts name
 end
 
+=begin
+Write a program that prints a greeting message.
+This program should contain a method called greeting
+that takes a name as its parameter and returns a string.
+=end
+def greeting(name)
+  puts "Hello #{name}"
+end
+greeting("Mark")
+
+=begin
+Write a program that includes a method called multiply that takes two
+arguments and returns the product of the two numbers
+=end
+def multiply(a,b)
+  a*b
+end
+multiply(12,34)
+
+=begin
+Correct the following code
+def scream(words)
+  words = words + "!!!!"
+  return
+  puts words
+end
+
+scream("Yippeee")
+=end
+def scream(words)
+  word = words + "!!!!"
+  puts word
+end
+scream("Yippeee")
