@@ -84,3 +84,15 @@ def scream(words)
   puts word
 end
 scream("Yippeee")
+
+
+=begin
+Write a method that takes a string as an argument. The method should return a
+new, all-caps version of the string, only if the string is
+longer than 10 characters. Example: change "hello world" to "HELLO WORLD".
+=end
+
+def uppercase(word)
+  word.upcase
+end
+puts uppercase("I love coding in ruby")
