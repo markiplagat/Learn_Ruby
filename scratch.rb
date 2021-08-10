@@ -96,3 +96,39 @@ def uppercase(word)
   word.upcase
 end
 puts uppercase("I love coding in ruby")
+
+
+=begin
+Given a hash of family members, with keys as the title and an array of
+ names as the values, use Ruby's built-in select method to gather only
+immediate family members' names into a new array.
+
+family = {  uncles: ["bob", "joe", "steve"],
+            sisters: ["jane", "jill", "beth"],
+            brothers: ["frank","rob","david"],
+            aunts: ["mary","sally","susan"]
+          }
+=end
+
+family = {  uncles: ["bob", "joe", "steve"],
+            sisters: ["jane", "jill", "beth"],
+            brothers: ["frank","rob","david"],
+            aunts: ["mary","sally","susan"]
+}
+immediate_family_members = family.select do |key, val|
+  key == :brothers || key == :sisters
+end
+arr = immediate_family_members.values.flatten
+puts arr
+
+
+=begin
+Using some of Ruby's built-in Hash methods, write a program that loops
+through a hash and prints all of the keys. Then write a program that does
+the same thing except printing the values. Finally, write a program that
+prints both.
+=end
+
+family.each_key { |key| puts key }
+family.each_value{ |value| puts value}
+family.each { |key, value| puts "The family of #{key} are #{value}" }

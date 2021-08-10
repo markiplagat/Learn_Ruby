@@ -316,9 +316,26 @@ Tools.sayhello("mark")
 
 
 #Use information of a file
-require_relative 'random_numbers'
+# require_relative 'random_numbers'
 
 
+#Hashes optional parameters
+def greeting(name, options = {})
+  if options.empty?
+    puts "Hello #{name}"
+  else
+    puts "Hello #{name} from #{options[:country]} your age is #{options[:age]}"
+  end
+end
+greeting("Mark")
+greeting("Kip", age: 13, country: "Kenya")
+
+
+#Loop through an array and get value and its index
+names = ["Mark", "Rutto", "Kiplagat", "Becky", "Norah"]
+names.each_with_index do |name, index|
+  puts "#{name} is index #{index+1}"
+end
 #Interactive Ruby irb
 
 
