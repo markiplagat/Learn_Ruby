@@ -132,3 +132,15 @@ prints both.
 family.each_key { |key| puts key }
 family.each_value{ |value| puts value}
 family.each { |key, value| puts "The family of #{key} are #{value}" }
+
+=begin
+Using loop, print out even numbers from 1-100
+=end
+
+x=1
+loop do
+  x+=1
+  next unless (x % 2) == 0
+    puts x
+  break if x >= 100
+  end
