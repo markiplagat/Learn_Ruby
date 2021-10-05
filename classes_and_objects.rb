@@ -19,6 +19,7 @@ class Person < Humans
     evolve
   end
 
+  # Class method
   def self.count_all_people
     return @@persons
   end
@@ -31,6 +32,8 @@ puts Person.count_all_people
 
 
 class Person
+  # The initialize works hand in hand with new.
+  # When Person.new is called initialize! is called and values are set
   def initialize(id,name, age)
     @id = id
     @age = age

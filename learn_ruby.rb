@@ -332,10 +332,18 @@ greeting("Kip", age: 13, country: "Kenya")
 
 
 #Loop through an array and get value and its index
-names = ["Mark", "Rutto", "Kiplagat", "Becky", "Norah"]
+names = %w[Mark Rutto Kiplagat Becky Norah]
 names.each_with_index do |name, index|
   puts "#{name} is index #{index+1}"
 end
-#Interactive Ruby irb
+
+=begin
+Using select and reject to pick a specific data rejecting the one you may
+not want
+=end
+# Using the names array above, lets say we dont want to invite Norah to the party
+puts names.select {|friend| friend != 'Norah'}
+# Or
+puts names.reject {|friend| friend == 'Norah'}
 
 

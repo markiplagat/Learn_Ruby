@@ -110,10 +110,10 @@ family = {  uncles: ["bob", "joe", "steve"],
           }
 =end
 
-family = {  uncles: ["bob", "joe", "steve"],
-            sisters: ["jane", "jill", "beth"],
-            brothers: ["frank","rob","david"],
-            aunts: ["mary","sally","susan"]
+family = {  uncles: %w[bob joe steve],
+            sisters: %w[jane jill beth],
+            brothers: %w[frank rob david],
+            aunts: %w[mary sally susan]
 }
 immediate_family_members = family.select do |key, val|
   key == :brothers || key == :sisters
