@@ -52,12 +52,13 @@ class Customer
     @customer_name = name
     @customer_addr = addr
   end
-  def display_details()
+
+  def display_details
     puts "Customer id #{@customer_id}"
     puts "Customer name #{@customer_name}"
     puts "Customer address #{@customer_addr}"
   end
-  def total_number_of_customers()
+  def total_number_of_customers
     puts "Total number of customers: #{@@no_of_customers}"
   end
 end
@@ -210,14 +211,12 @@ else
 end
 
 # for loop
-cars = ["Lamborghini", "Toyota", "Subaru", "Audi", "Ferrari", "Porsche", "Chevrolet", "Acura"]
+cars = %w[Lamborghini Toyota Subaru Audi Ferrari Porsche Chevrolet Acura]
 cars.each do |car|
   puts car
 end
 
-for car_type in cars
-  puts car_type
-end
+cars.each { |car_type| puts car_type }
 
 #Exponent method
 def pow(base_num, pow_num)
@@ -265,13 +264,13 @@ questions = [
 def run_test(questions)
   answer = ""
   score = 0
-  for question in questions
+  questions.each { |question|
     puts question.prompt
     answer = gets.chomp
     if answer == question.answer
-      score +=1
+      score += 1
     end
-  end
+  }
   puts "You got #{score}/#{questions.length}"
 end
 run_test(questions)
@@ -332,7 +331,7 @@ greeting("Kip", age: 13, country: "Kenya")
 
 
 #Loop through an array and get value and its index
-names = %w[Mark Rutto Kiplagat Becky Norah]
+names = %w[Mark Rutto Kiplagat]
 names.each_with_index do |name, index|
   puts "#{name} is index #{index+1}"
 end
@@ -342,8 +341,8 @@ Using select and reject to pick a specific data rejecting the one you may
 not want
 =end
 # Using the names array above, lets say we dont want to invite Norah to the party
-puts names.select {|friend| friend != 'Norah'}
+puts names.select {|friend| friend != 'Mark'}
 # Or
-puts names.reject {|friend| friend == 'Norah'}
+puts names.reject {|friend| friend == 'Mark'}
 
 
