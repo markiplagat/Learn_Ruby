@@ -345,4 +345,16 @@ puts names.select {|friend| friend != 'Mark'}
 # Or
 puts names.reject {|friend| friend == 'Mark'}
 
-
+# take user input and calculate the frequencies of each word
+puts "Enter text here. With repeated words please."
+text = gets.chomp
+words = text.split(" ")
+frequencies = Hash.new(0)
+words.each do |word|
+  frequencies[word] += 1
+  frequencies = frequencies.sort_by{|a, b| b}
+  frequencies.reverse!
+  frequencies.each do |word, frequency|
+    puts word + " " +frequency.to_s
+  end
+end
