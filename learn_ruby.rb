@@ -108,7 +108,7 @@ class Customer
     @customer_name = name
     @customer_addr = addr
   end
-  def display_details()
+  def display_details
     puts "Customer id #{@customer_id}"
     puts "Customer name #{@customer_name}"
     puts "Customer address #{@customer_addr}"
