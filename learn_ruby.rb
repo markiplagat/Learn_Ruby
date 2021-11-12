@@ -33,6 +33,9 @@ BEGIN{
 END {
   puts "You can now talk, Mark is done"
 }
+
+# Classes
+
 =begin
 A class is a blue print from which individual objects are created.
 Example is a bicycle is an instance of a class of objects known as bicycles
@@ -43,6 +46,7 @@ Class variables are available across different objects. Preceded by @@
 Global variable are not available across classes. Preceded by $
 =end
 class Customer
+  # class variable
   @@no_of_customers = 0
 
   #Will be executed when the new method of the class is called with parameters.
@@ -58,10 +62,13 @@ class Customer
     puts "Customer name #{@customer_name}"
     puts "Customer address #{@customer_addr}"
   end
+
   def total_number_of_customers
     puts "Total number of customers: #{@@no_of_customers}"
   end
+
 end
+
 #Create Objects
 customer1 = Customer.new("1", "Mark", "Nairobi")
 customer2 = Customer.new("2", "Rutto", "Eldoret")
@@ -79,7 +86,6 @@ class Sample
 end
 object = Sample.new
 object.hello
-
 
 
 #Global variables
@@ -176,10 +182,12 @@ end
 
 #methods
 
-def sayhi(name, age) #define a method and set parameters
+#define a method and set parameters
+def sayhi(name, age)
   puts "Hello #{name} you're #{age} years old"
 end
-sayhi("mark", 35) #call the method
+#call the method
+sayhi("mark", 35)
 
 
 #return statement --making a method give us a feedback
