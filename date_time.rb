@@ -1,7 +1,7 @@
 time = Time.new
 
 # Current date and time
-puts "The time is: " + time.inspect
+puts 'The time is: ' + time.inspect
 # Year
 puts time.year
 # Month (1 to 12)
@@ -26,7 +26,5 @@ puts time.zone
 # To format time [sec,min,hour,day,month,year,wday,yday,isdst,zone]
 Time.local(2021, 7, 20, 9, 10)
 
-=begin
-For more:
-https://www.tutorialspoint.com/ruby/ruby_date_time.htm
-=end
+# For more:
+# https://www.tutorialspoint.com/ruby/ruby_date_time.htm
