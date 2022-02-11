@@ -125,3 +125,20 @@ loop do
   puts x
   break if x >= 100
 end
+
+=begin
+write a program that calculates
+the number of milliseconds in one day. How would you approach this
+problem? How many hours in one day? How many minutes in one hour?
+How many seconds in one minute? How many milliseconds in one second?
+=end
+
+milliseconds = 24 * 60 * 60 * 1000
+puts "The number of milliseconds a day are #{milliseconds}"
+
+=begin
+Learn midnight command for file system access.
+cat filename ->Copy files content to the terminal
+head -1
+=end
+
