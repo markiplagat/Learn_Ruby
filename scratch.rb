@@ -142,3 +142,18 @@ cat filename ->Copy files content to the terminal
 head -1
 =end
 
+
+=begin
+Write a program that will ask for login and password. If login is “admin”
+and password is “12345”, it should print “Granted access to online banking”.
+=end
+
+puts "Your Login name:"
+login = gets.chomp
+puts "Password:"
+password = gets.chomp
+
+if login === 'admin' && password === '12345'
+  puts "Granted access to online banking"
+end
+
