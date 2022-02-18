@@ -354,3 +354,9 @@ words.each do |word|
     puts word + ' ' + frequency.to_s
   end
 end
+
+# Ternary operation. something_is_truthy? do_this() : else_this()
+def ternary
+  true
+end
+ternary ? puts "This is ternary" : "It is not a ternary"
