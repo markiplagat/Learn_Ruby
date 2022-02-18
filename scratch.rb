@@ -126,34 +126,24 @@ loop do
   break if x >= 100
 end
 
-=begin
-write a program that calculates
-the number of milliseconds in one day. How would you approach this
-problem? How many hours in one day? How many minutes in one hour?
-How many seconds in one minute? How many milliseconds in one second?
-=end
+# write a program that calculates
+# the number of milliseconds in one day. How would you approach this
+# problem? How many hours in one day? How many minutes in one hour?
+# How many seconds in one minute? How many milliseconds in one second?
 
 milliseconds = 24 * 60 * 60 * 1000
 puts "The number of milliseconds a day are #{milliseconds}"
 
-=begin
-Learn midnight command for file system access.
-cat filename ->Copy files content to the terminal
-head -1
-=end
+# Learn midnight command for file system access.
+# cat filename ->Copy files content to the terminal
+# head -1
 
+# Write a program that will ask for login and password. If login is “admin”
+# and password is “12345”, it should print “Granted access to online banking”.
 
-=begin
-Write a program that will ask for login and password. If login is “admin”
-and password is “12345”, it should print “Granted access to online banking”.
-=end
-
-puts "Your Login name:"
+puts 'Your Login name:'
 login = gets.chomp
-puts "Password:"
+puts 'Password:'
 password = gets.chomp
 
-if login === 'admin' && password === '12345'
-  puts "Granted access to online banking"
-end
-
+puts 'Granted access to online banking' if login === 'admin' && password === '12345'

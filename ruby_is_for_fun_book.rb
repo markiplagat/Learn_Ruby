@@ -39,7 +39,6 @@ def status
   puts "#{@humans} humans and #{@machines} machines left"
 end
 
-
 def first_event
   puts "Missile launched against #{random_city}"
   random_sleep
@@ -60,13 +59,10 @@ end
 
 def victory?
   false
-
 end
 
 loop do
-  if victory?
-    exit
-  end
+  exit if victory?
   dice = rand(1..3)
 
   if dice == 1
@@ -80,4 +76,3 @@ loop do
   status
   random_sleep
 end
-
