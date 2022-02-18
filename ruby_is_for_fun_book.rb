@@ -76,3 +76,7 @@ loop do
   status
   random_sleep
 end
+
+def status
+  puts 'Home'
+end
