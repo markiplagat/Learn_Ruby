@@ -27,3 +27,15 @@ end
 
 puts split_words('Love is not a language')
 
+#Capitalize every word
+
+word = "How can i capitalize this sentence"
+
+def capitalize_word(word)
+  # puts word.split.map { |w| w.capitalize}.join' '
+  # or
+  puts word.split.map(&:capitalize).join' '
+end
+
+
+capitalize_word(word)
