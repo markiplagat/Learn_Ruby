@@ -24,7 +24,7 @@ matrix.sort_by { |obj| obj.size }
 puts 'Mark'.chars.sort.join
 
 # Case sensitive sort
-puts 'CgefhSheShdgs'.chars.sort(&:casecmp).join
+puts 'ChefShedShags'.chars.sort(&:casecmp).join
 
 # Sort a hash
 person = {
