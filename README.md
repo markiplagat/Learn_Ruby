@@ -1,4 +1,4 @@
 # Learn_Ruby
 
 ### Run file
-``$ ruby filename.rb``
+``$ ruby {filename}.rb``
