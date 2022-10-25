@@ -345,18 +345,19 @@ puts names.reject { |friend| friend == 'Mark' }
 puts 'Enter text here. With repeated words please.'
 text = gets.chomp
 words = text.split(' ')
-frequencies = Hash.new(0)
+frequencies = {}
 words.each do |word|
+  frequencies.store(word, 0) unless frequencies[word]
   frequencies[word] += 1
-  frequencies = frequencies.sort_by { |_a, b| b }
-  frequencies.reverse!
-  frequencies.each do |word, frequency|
-    puts word + ' ' + frequency.to_s
-  end
+end
+frequencies = frequencies.sort_by { |_a, b| b }
+frequencies.reverse!
+frequencies.each do |frequent_word, frequency|
+  puts frequent_word + "#{frequency.to_s == '1' ? ' appears only ' : ' is repeated '}" + frequency.to_s + "#{frequency.to_s == '1' ? ' time' : ' times'}"
 end
 
 # Ternary operation. something_is_truthy? do_this() : else_this()
 def ternary
   true
 end
-ternary ? puts "This is ternary" : "It is not a ternary"
+ternary ? (puts 'This is ternary') : (puts 'It is not a ternary')
