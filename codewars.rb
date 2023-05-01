@@ -13,7 +13,7 @@ solution = ''
 # Solution 1
 string.split(' ').each { |word| solution += word.length > 4 ? word.reverse! + ' ' : word + ' ' }
 # or Solution 2
-string.split.map! { |s| s.length >= 5 ? s.reverse : s }.join ' '
+string.split.map! { |s| s.length >= 5 ? s.reverse : s }.join(' ')
 puts string
 solution.strip!
 
@@ -28,13 +28,12 @@ end
 puts split_words('Love is not a language')
 
 # Capitalize every word
-
 word = 'How can i capitalize this sentence'
 
 def capitalize_word(word)
   # puts word.split.map { |w| w.capitalize}.join' '
   # or
-  puts word.split.map(&:capitalize).join ' '
+  puts word.split.map(&:capitalize).join(' ')
 end
 
 capitalize_word(word)

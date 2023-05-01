@@ -27,7 +27,7 @@ BAR
 
 # Declare the code to be called before the program is run
 BEGIN {
-  puts "Hey Don't disturb Mark is learning Ruby"
+  puts "Hey Don't disturb, Mark is learning Ruby"
 }
 # Declare the code to be called at the end of the document
 at_exit do
