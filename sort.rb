@@ -1,7 +1,7 @@
 # Sort and sort_by.
 
 # Sorting an array in descending order
-[1, 2, 3, 4].sort { |a, b| b <=> a }
+[1, 2, 3, 4].sort { |a, b| puts a }
 
 # The sorting operator (<=>)(spaceship operator)
 # 0 => Equal

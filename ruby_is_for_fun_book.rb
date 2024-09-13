@@ -18,13 +18,14 @@ end
 
 def random_city
   dice = rand(1..5)
-  if dice == 1
+  case dice
+  when 1
     'Nairobi'
-  elsif dice == 2
+  when 2
     'Nakuru'
-  elsif dice == 3
+  when 3
     'Eldoret'
-  elsif dice == 4
+  when 4
     'Kisumu'
   else
     'Mombasa'
@@ -77,6 +78,6 @@ loop do
   random_sleep
 end
 
-def status
-  puts 'Home'
-end
+# def status
+#   puts 'Home'
+# end
